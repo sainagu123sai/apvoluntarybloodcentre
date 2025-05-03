@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A.P. Voluntary Blood Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body::before {
+      content: "";
+      background: url('back.png') no-repeat center center;
+      background-size: 500px;
+      opacity: 0.05; /* Adjust this to control visibility */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    
+    xsx::after{
+        width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Navigation Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="Logo" class="w-10 h-10 rounded-full bg-white p-1" />
+          <h1 class="text-lg md:text-2xl font-bold text-red-700">A.P. Voluntary Blood Center</h1>
+        </div>
+        <nav class="hidden md:flex gap-4">
+          <a href="index.html" class="px-5 py-2 rounded-full font-medium text-red-600 bg-red-100 hover:bg-red-200 transition-all duration-300 shadow-sm">
+            🏠 Home
+          </a>
+        
+          <a href="tel:+919224243838" class="px-5 py-2 rounded-full font-medium text-red-600 bg-red-100 hover:bg-red-200 transition-all duration-300 shadow-sm">
+            📞 Contact
+          </a>
+        </nav>
+        <button class="md:hidden text-3xl text-red-600" onclick="toggleMenu()">☰</button>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden px-4 pb-4 space-y-3 text-center">
+        <a href="index.html" class="block px-4 py-2 rounded-full text-white bg-red-600 hover:bg-red-700 transition">🏠 Home</a>
+        <a href="#contact" class="block px-4 py-2 rounded-full text-white bg-red-600 hover:bg-red-700 transition">📞 Contact</a>
+      </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-4 bg-red-50 animate-fade-in">
+    <h2 class="text-4xl md:text-5xl font-bold text-red-700">Be the Reason for Someone’s Heartbeat</h2>
+    <p class="mt-4 text-lg text-gray-700 max-w-xl mx-auto">Join our mission to save lives through voluntary blood donation.</p>
+    <div class="mt-6 space-x-4">
+      <a href="tel:+919224243838" class="bg-white text-red-600 border border-red-600 px-6 py-3 rounded-full font-semibold hover:bg-red-100 transition-all duration-300">Request Blood</a>
+    </div>
+  </section>
+
+  <!-- Quotes Section -->
+  <section class="py-16 px-6 max-w-6xl mx-auto text-center animate-fade-in">
+    <h3 class="text-3xl font-semibold text-red-600 mb-10">Why Donate Blood?</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-left">
+      <blockquote class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+        <p class="italic">“The blood you donate gives someone another chance at life.”</p>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+        <p class="italic">“You don’t have to be a doctor to save lives. Just donate blood.”</p>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+        <p class="italic">“Your little effort can give others a second chance to live.”</p>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+        <p class="italic">“Be a hero. It takes only 15 minutes to donate blood.”</p>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+        <p class="italic">“Every drop of blood is a gift of life.”</p>
+      </blockquote>
+      <blockquote class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
+        <p class="italic">“One donation can save up to three lives.”</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Animated Photo Gallery -->
+  <section class="py-16 px-6 bg-gray-100">
+    <h3 class="text-3xl font-semibold text-center text-red-600 mb-10">📸 Our Blood Bank in Action</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+      <div class="photo-card opacity-0 transform translate-y-6 transition duration-700 delay-[100ms]">
+        <img src="photo1.jpg" alt="Blood Donation Camp" class="w-full h-48 object-cover rounded-xl shadow-md">
+      </div>
+      <div class="photo-card opacity-0 transform translate-y-6 transition duration-700 delay-[300ms]">
+        <img src="photo2.png" alt="Volunteers Working" class="w-full h-48 object-cover rounded-xl shadow-md">
+      </div>
+      <div class="photo-card opacity-0 transform translate-y-6 transition duration-700 delay-[500ms]">
+        <img src="ph3.png" alt="Donor Area" class="w-full h-48 object-cover rounded-xl shadow-md">
+      </div>
+      <div class="photo-card opacity-0 transform translate-y-6 transition duration-700 delay-[700ms]">
+        <img src="photo4.png" alt="Team Collaboration" class="w-full h-48 object-cover rounded-xl shadow-md">
+      </div>
+    </div>
+  </section>
+  <!-- Highlights Section: Advanced, Hygienic, and Secure -->
+<section class="py-16 px-6 bg-red-50">
+  <div class="max-w-6xl mx-auto text-center animate-fade-in-up">
+    <h2 class="text-4xl md:text-5xl font-bold text-red-700 mb-6">🚨 Setting New Standards in Blood Donation</h2>
+    <p class="text-lg text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+      <strong>A.P. Voluntary Blood Center</strong> is proud to be the most <span class="text-red-600 font-semibold">technologically advanced</span> facility in and around <strong>Gudivada</strong>. With <span class="text-red-600 font-semibold">cutting-edge medical equipment</span> and a commitment to <span class="text-red-600 font-semibold">100% hygiene and security</span>, we ensure every drop of blood is handled with care, precision, and trust.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+        
+        <h4 class="text-xl font-bold text-red-600 mb-2">Advanced Equipment</h4>
+        <p class="text-gray-600">We use the latest automated collection and testing systems — not found anywhere else nearby.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+        <h4 class="text-xl font-bold text-red-600 mb-2">Complete Hygiene</h4>
+        <p class="text-gray-600">Our center is sterilized regularly with medical-grade protocols to protect every donor.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+        <h4 class="text-xl font-bold text-red-600 mb-2">Fully Secured</h4>
+        <p class="text-gray-600">24/7 surveillance and secure access ensure your safety and data privacy.</p>
+      </div>
+    </div>
+
+    <div class="mt-10"><!--
+      <video class="rounded-xl shadow-xl w-full max-w-4xl mx-auto" autoplay muted loop playsinline>
+        <source src="center-tour.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>-->
+      <p class="mt-4 text-gray-600 italic text-sm">A glimpse of our facility and services in action</p>
+    </div>
+  </div>
+</section>
+
+        <!-- Quotes Panel -->
+    <section class="mt-16 bg-red-100 py-12 px-4 rounded-xl shadow-inner">
+      <h2 class="text-3xl font-bold text-center text-red-700 mb-8">💬 Inspiring Words from the Heart</h2>
+      <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-center">
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300">
+          <p class="text-gray-700 italic">"Donate blood. Save a life. Be a hero."</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300">
+          <p class="text-gray-700 italic">"To the world, you may be one person. But to one person, you may be the world."</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300">
+          <p class="text-gray-700 italic">"A single pint can save three lives. A single gesture can create a million smiles."</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300">
+          <p class="text-gray-700 italic">"You don’t have to be a doctor to save lives. Just donate blood."</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300">
+          <p class="text-gray-700 italic">"It costs you nothing, but it means everything."</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-all duration-300">
+          <p class="text-gray-700 italic">"You are somebody’s type."</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Address Panel + Map -->
+  <section class="py-12 bg-white px-6">
+    <h3 class="text-2xl font-semibold text-center text-red-600 mb-6">📍 Our Location</h3>
+    <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto items-start">
+      <div class="bg-gray-100 p-6 rounded shadow-md" src="lable.png">
+        <img src="lable.png" alt="location">
+        </div>
+
+      <!-- Google Map Embed -->
+      <iframe 
+  class="rounded shadow-md w-full h-64" 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.5364028883246!2d81.00751207482107!3d16.434087684292588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a362e7179e13db5%3A0x1ab05f13f6c8b295!2sGVR%20Central%2C%20Gudivada%2C%20Andhra%20Pradesh%20521175!5e0!3m2!1sen!2sin!4v1714137643916!5m2!1sen!2sin" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+  </section>
+
+      <!-- Contact Card Component -->
+<section class="mt-10 flex justify-center" id="xsx">
+  <div class="bg-white rounded-xl shadow-xl p-6 w-full max-w-md transition transform hover:-translate-y-1 hover:shadow-2xl duration-300" wight="full">
+
+    <div class="flex items-center mb-4">
+      <img src="logo11.png" alt="Logo" class="w-12 h-12 rounded-full border border-red-600 p-1 bg-red-100" />
+      <div class="ml-4">
+        <h2 class="text-xl font-bold text-red-700">A.P. Voluntary Blood Center</h2>
+        <p class="text-sm text-gray-600 italic">Saving lives, one drop at a time</p>
+      </div>
+    </div>
+
+    <div class="space-y-3 text-gray-800 text-sm">
+      <div class="flex items-center gap-3">
+        <span class="text-red-600 text-lg">📍</span>
+        <span>#11/136, 2nd Floor, GVR Central Commercial Complex, Eluru Road, Gudivada, Krishna Dist.</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-red-600 text-lg">📞</span>
+        <a href="tel:+919224243838" class="hover:underline">+91 92 2424 3838</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-red-600 text-lg">📞</span>
+        <a href="tel:+8674316480" class="hover:underline">+91 86 7481 6480</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-red-600 text-lg">✉️</span>
+        <a href="mailto:apvoluntarybloodcenter@gmail.com" class="hover:underline">apvoluntarybloodcenter247@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="mt-5 text-center">
+      <a href="https://maps.google.com/?q=16.440779,80.992065" target="https://maps.google.com/?q=16.440779,80.992065"
+      
+         class="inline-block px-5 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition">
+        View on Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- JavaScript for Navbar and Photo Animation -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Animate photo cards on scroll
+    const photoCards = document.querySelectorAll('.photo-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-6');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    photoCards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
